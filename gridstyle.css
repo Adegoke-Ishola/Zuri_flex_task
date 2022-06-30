@@ -3,46 +3,54 @@
     padding: 0;
  }
 body{
-    background-color: bisque;
+    background-color: rgb(29, 25, 25);
+    display: flex;
+    place-items: center;
+    min-height: 100vh;
 }
-.container{
-    width: 100vw;
-    height: 100vw;
+.container {
+    border: solid rgb(46, 45, 45);
+    margin: auto;
+    background-color: rgb(46, 45, 45);
     display:grid;
-    grid-template-columns : 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    width: 50%;
+    /* using grid template area to configure the grid */
+    grid-template-areas: 
+    "a a a b"
+    "a a a b"
+    "c c d d"
+    "c c e e";
     gap: 10px;
-    padding: 10px;
+    padding: 30px;
     padding-right: 50px;
     box-sizing: border-box;
     }
+/* styling all divs */
 .container div{
     padding:10px;
     border: 1px solid black;
     }
-.top-left{
-    grid-column-start:1;
-    grid-column-end: span 2;
-    grid-row-start: 1;
-    grid-row-end: 3;
-    background-color: rgb(185, 135, 42);
+/* styling individual classes */
+.Top-left{
+    background-color: rgb(126, 116, 119);
+    grid-area: a;
     }
 .sec_top{
-    grid-column: 1fr;
-    grid-row: 1fr;
     background-color: pink;
+    grid-area: b;
     }
 .bottom-left{
-    grid-row-start:3;
-    grid-row-end: 5;
-    background-color: dark green;
+    background-color: green;
+    grid-area: c;
     }
 .bottom-right_1{
-    grid-row-start: 3;
-    grid-row-end:4;
     background-color: blue;
+    grid-area: d;
     }
 .bottom-right_2nd{
     background-color: aquamarine;
+    grid-area: e;
 } 
-           
+footer{
+    background-color: rgb(235, 88, 88);
+}       
